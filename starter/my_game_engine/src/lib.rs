@@ -33,7 +33,7 @@ mod tests {
         start_window_and_game_loop!("Test screen clearing", 800, 600, 2, {
             
             let red_sprite = spawn_sprite!(100.0, 100.0, 50, 50, 255, 0, 0);
-            let green_sprite = spawn_sprite!(100.0, 100.0, 50, 50, 0, 255, 0);
+            let green_sprite = spawn_sprite!(150.0, 150.0, 50, 50, 0, 255, 0);
 
             let start = std::time::Instant::now();
 
@@ -56,7 +56,7 @@ mod tests {
     #[test]
     #[ignore]
     fn test_key_presses() {
-        start_window_and_game_loop!("Test key presses", 800, 600, 2, {
+        start_window_and_game_loop!("Test key presses : Please press right arrow key to continue !", 800, 600, 2, {
             let green_sprite = spawn_sprite!(100.0, 100.0, 50, 50, 0, 255, 0);
             let mut right = false;
 
@@ -74,7 +74,7 @@ mod tests {
     #[test]
     #[ignore]
     fn test_sprite_position_update() {
-        start_window_and_game_loop!("Test sprite position update", 800, 600, 2, {
+        start_window_and_game_loop!("Test sprite position update (please wait 3 seconds before closing window)", 800, 600, 2, {
             let mut x = 100.0;
             let mut y = 100.0;
             let sprite_ob = spawn_sprite!(x, y, 50, 50, 255, 0, 0);
