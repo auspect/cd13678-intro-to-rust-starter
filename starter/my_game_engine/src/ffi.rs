@@ -21,7 +21,7 @@ pub const GLFW_KEY_DOWN: c_int = 264;
 pub const GLFW_KEY_UP: c_int = 265;
 
 // FFI function declarations
-unsafe extern "C" {
+extern "C" {
     pub fn create_game_window(title: *const i8, width: c_int, height: c_int);
 
     pub fn create_sprite(

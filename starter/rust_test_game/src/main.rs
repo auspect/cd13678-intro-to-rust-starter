@@ -34,7 +34,7 @@ fn main() {
     let mut sprites: Vec<*mut my_game_engine::ffi::Sprite> = Vec::new();
 
     // Start game window and loop
-    start_window_and_game_loop!("Rust Test Game", 800, 600, 16, {
+    start_window_and_game_loop!("Rust Test Game (using only space key for simplicity)", 800, 600, 16, {
         // Check for messages from networking thread
         while let Ok(message) = to_main_rx.inner.try_recv() {
             match message {
