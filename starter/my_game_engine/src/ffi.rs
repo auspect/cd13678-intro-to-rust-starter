@@ -52,7 +52,7 @@ unsafe extern "C" {
 // Safe Rust wrappers around the FFI functions
 pub fn create_window(title: &str, width: i32, height: i32) {
     let c_title = CString::new(title).unwrap();
-    unsafe { create_game_window(c_title.as_ptr(), width, height) }
+    unsafe { create_game_window(c_title.as_ptr() as *const i8, width, height) }
 }
 
 pub fn sprite(x: f32, y: f32, w: i32, h: i32, r: i32, g: i32, b: i32) -> *mut Sprite {
